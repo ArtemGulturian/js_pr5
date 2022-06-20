@@ -23,7 +23,7 @@ function ret(){
 
 const anotherNum = ret();
 console.log(anotherNum);
-*/
+*
 //-----------------
 
 const logger = function(){
@@ -37,4 +37,19 @@ logger();
 const calc = (a, b) => {
     console.log('1');
     return a + b;
+}*/
+//---
+function getMathResult(num1, num2){
+
+    let str = '';
+
+    for (let i = 1; i <= num2; i++){
+        if (i === num2){
+            str += `${num1 * i}`;
+        } else {
+            str += `${num1 * i}---`;
+        }
+    }
+    return str;
 }
+console.log(getMathResult(2, 13));
