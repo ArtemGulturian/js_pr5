@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 let numberOfFilms;
 
 function start(){
@@ -62,3 +62,34 @@ function writeYourGenres() {
     }
 }
 writeYourGenres();
+*
+//---
+// Место для первой задачи
+// объем полной поверхности = а^3
+// площадь полной поверхности = 6 * a^2
+function calculateVolumeAndArea(rebro) {
+    if (typeof(rebro) !== 'number' || rebro < 0  || !Number.isInteger(rebro) ){
+        return "При вычислении произошла ошибка";    
+    }
+    rebro = prompt('Введите целое число ребра куба', '');
+        let surfaceVolume = Math.pow(rebro, 3);
+        let square = 6 * Math.pow(rebro, 2);
+
+    return `Объем куба: ${surfaceVolume}, площадь всей поверхности: ${square}`;
+}
+console.log(calculateVolumeAndArea(5));*/
+
+// Место для второй задачи
+function getCoupeNumber(coupeNumber) {
+    if (coupeNumber === 0 || coupeNumber > 36){
+        return "Таких мест нет";
+    }
+    if (typeof(coupeNumber) !== 'number' || coupeNumber < 0 || !Number.isInteger(coupeNumber)) {
+        return "Ошибка. Проверьте правильность введенного номера места";
+    }
+
+    for (let i = 4; i <=36; i + 4){
+        return Math.ceil(coupeNumber / i);
+    }
+}
+console.log(getCoupeNumber(15));
